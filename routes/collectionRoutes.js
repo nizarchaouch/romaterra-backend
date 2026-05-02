@@ -15,8 +15,3 @@ router.put('/:id', authenticateAdmin, updateCollection);
 router.delete('/:id', authenticateAdmin, deleteCollection);
 
 module.exports = router;
-
-
-
-
-
