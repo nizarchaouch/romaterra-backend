@@ -40,9 +40,11 @@ exports.createProduct = async (req, res) => {
     }
 
     // Parse other fields from req.body
+    const body = req.body || {};
+
     const productData = {
-      ...req.body,
-      images: imageUrls.length > 0 ? imageUrls : (req.body.images || []),
+      ...body,
+      images: imageUrls.length > 0 ? imageUrls : (body.images || []),
     };
 
     // Parse JSON fields if they're strings (common with multipart/form-data)
