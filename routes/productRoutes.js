@@ -14,7 +14,8 @@ const router = express.Router();
 
 router.get('/', getProducts);
 router.get('/:id', getProductById);
-router.post('/', authenticateAdmin, uploadMultiple, createProduct);
+router.post('/', uploadMultiple, createProduct);
+// router.post('/',authenticateAdmin, uploadMultiple, createProduct);
 router.put('/:id', authenticateAdmin, uploadMultiple, updateProduct);
 router.delete('/:id', authenticateAdmin, deleteProduct);
 
